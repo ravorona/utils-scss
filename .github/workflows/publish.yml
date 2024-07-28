@@ -45,7 +45,7 @@ jobs:
         run: yarn build
 
       - name: Publish to NPM Registry
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -55,7 +55,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Publish to Github Package Repository
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
