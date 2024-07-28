@@ -1,0 +1,8 @@
+{
+  "name": "ravorona-utils-scss",
+  "version": "1.0.0-alpha",
+  "description": "SCSS utilities for project bootstrap",
+  "repository": "https://github.com/ravorona/scss.git",
+  "author": "яαvoroηα",
+  "license": "MIT"
+}
