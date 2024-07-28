@@ -4,7 +4,6 @@ import type Options from '@definitions/options'
 import * as fs from 'fs'
 import yargs from 'yargs'
 
-
 const args = yargs(process.argv).argv as Options
 const destination = args.destination ?? 'packages'
 
