@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+import*as o from"fs";import n from"yargs";var e=n(process.argv).argv,s=e.destination??"packages";console.info("SCSS Utils");console.info("Start \u2013 Copying assets to %s",s);o.rmSync(s,{recursive:!0,force:!0});o.mkdirSync(s);console.info("Done \u2013 Cleanup destination");o.cpSync("src/styles",s,{recursive:!0,force:!0});console.info("Done \u2013 Copy files into destination");
