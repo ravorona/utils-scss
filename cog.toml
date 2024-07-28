@@ -29,7 +29,7 @@ fix = { changelog_title = "🐞 Bug fixes" }
 hotfix = { changelog_title = "🔥 Bug fixes" }
 ci = { changelog_title = "🚀 Integrations & deployments" }
 perf = { changelog_title = "🏎️ Performances", omit_from_changelog = true }
-doc = { changelog_title = "📔 Documentations", omit_from_changelog = true }
+doc = { changelog_title = "📔 Documentations" }
 style = { changelog_title = "👘 Styles", omit_from_changelog = true }
 
 [changelog]
