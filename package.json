@@ -1,7 +1,7 @@
 {
   "name": "@ravorona/utils-scss",
   "version": "1.0.0",
-  "description": "SCSS utilities for project bootstrap",
+  "description": "SCSS utility to set up stylesheets for a new project.",
   "repository": "git@github.com:ravorona/utils-scss.git",
   "author": "яαvoroηα",
   "license": "MIT",
