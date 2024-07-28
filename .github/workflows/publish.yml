@@ -26,6 +26,8 @@ jobs:
     needs:
       - prepare
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
 
     steps:
       - name: Checkout repository
@@ -55,7 +57,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Publish to Github Package Repository
-        run: npm publish --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
