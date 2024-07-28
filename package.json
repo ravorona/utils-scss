@@ -2,7 +2,7 @@
   "name": "@ravorona/utils-scss",
   "version": "1.0.0-alpha",
   "description": "SCSS utilities for project bootstrap",
-  "repository": "https://github.com/ravorona/scss.git",
+  "repository": "git@github.com:ravorona/utils-scss.git",
   "author": "яαvoroηα",
   "license": "MIT",
   "bin": "./dist/index.js",
@@ -11,12 +11,18 @@
     "lint": "tsc --noEmit",
     "build": "tsup-node ./src/index.ts --format esm --minify --clean"
   },
-  "exports": {
-    "./package.json": "./package.json"
+  "keywords": [
+    "ravorona",
+    "scss",
+    "utils"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "@types/yargs": "^17.0.32",
+    "prettier": "^3.3.3",
     "tsup": "^8.2.3",
     "typescript": "^5.5.4",
     "yargs": "^17.7.2"
