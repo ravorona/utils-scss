@@ -1,0 +1,5 @@
+@use 'sass:math';
+
+@function rem($value, $base: $font-size) {
+    @return math.div(strip-units($value), $base) * 1rem;
+}
