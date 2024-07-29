@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/ravorona/utils-scss/compare/1.0.3..1.0.4) - 2024-07-29
+#### 📦 Features
+- Add color scheme media queries - ([23c78b5](https://github.com/ravorona/utils-scss/commit/23c78b56c02da31d7b60b261d38d41347f41ffda)) - [@ravorona](https://github.com/ravorona)
+
+- - -
+
 ## [1.0.3](https://github.com/ravorona/utils-scss/compare/1.0.2..1.0.3) - 2024-07-29
 #### 🚀 Integrations & deployments
 - GitHub trigger - ([a66e2eb](https://github.com/ravorona/utils-scss/commit/a66e2eb4a84662dd1d84d4908f95b7fa5553b401)) - [@ravorona](https://github.com/ravorona)
