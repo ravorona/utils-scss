@@ -1,3 +1,9 @@
+## [1.0.6](https://github.com/ravorona/utils-scss/compare/1.0.5..1.0.6) - 2024-07-29
+#### 🚀 Integrations & deployments
+- GitHub workflow update - ([6419c9d](https://github.com/ravorona/utils-scss/commit/6419c9d69a2e25fa937742788e18bca445457e23)) - [@ravorona](https://github.com/ravorona)
+
+- - -
+
 ## [1.0.5](https://github.com/ravorona/utils-scss/compare/1.0.4..1.0.5) - 2024-07-29
 #### 🚀 Integrations & deployments
 - Setup GitHub release job - ([09b484a](https://github.com/ravorona/utils-scss/commit/09b484ae9be93d97eda9ffc1e649d5f6b9569bcf)) - [@ravorona](https://github.com/ravorona)
