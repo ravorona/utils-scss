@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "SCSS utility to set up stylesheets for a new project.",
   "repository": "git@github.com:ravorona/utils-scss.git",
-  "author": "яαvoroηα",
+  "author": "яαvoroηα <h.rakotonjanahary@gmail.com>",
   "license": "MIT",
   "bin": "./dist/index.js",
   "scripts": {
