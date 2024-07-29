@@ -2,8 +2,6 @@ name: Publish SCSS Utils into GitHub
 
 on:
   push:
-    branches:
-      - main
     tags:
       - '**'
 
