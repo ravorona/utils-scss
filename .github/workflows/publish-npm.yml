@@ -1,9 +1,13 @@
-name: Publish SCSS Utils Package
+name: Publish SCSS Utils into NPM
 
 on:
   push:
     tags:
       - '**'
+
+concurrency:
+  group: npm
+  cancel-in-progress: true
 
 jobs:
   prepare:

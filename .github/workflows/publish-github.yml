@@ -1,4 +1,4 @@
-name: Publish SCSS Utils Package
+name: Publish SCSS Utils into GitHub
 
 on:
   push:
@@ -6,6 +6,10 @@ on:
       - main
     tags:
       - '**'
+
+concurrency:
+  group: github
+  cancel-in-progress: true
 
 jobs:
   prepare:
