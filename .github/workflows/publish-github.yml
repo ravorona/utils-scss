@@ -55,6 +55,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+    permissions:
+      packages: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
       - name: Create release
         uses: actions/create-release@master
         env:
