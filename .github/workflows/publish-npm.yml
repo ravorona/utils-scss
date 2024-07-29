@@ -1,0 +1,52 @@
+name: Publish SCSS Utils Package
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Cache node modules
+        id: cache-theme-modules
+        uses: actions/cache@master
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-modules-${{ hashFiles('yarn.lock') }}
+
+  publish:
+    name: Publish package
+    needs:
+      - prepare
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Setup node & registry url for npm package registry
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install package dependencies
+        if: steps.cache-theme-modules.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: Build package
+        run: yarn build
+
+      - name: Publish to NPM Registry
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
