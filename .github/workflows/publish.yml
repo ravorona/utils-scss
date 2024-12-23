@@ -1,4 +1,4 @@
-name: Publish SCSS Utils into GitHub
+name: Publish SCSS Utils into NPM
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - '**'
 
 concurrency:
-  group: github
+  group: npm
   cancel-in-progress: true
 
 jobs:
@@ -25,7 +25,40 @@ jobs:
           path: node_modules
           key: ${{ runner.OS }}-build-modules-${{ hashFiles('yarn.lock') }}
 
-  publish:
+  publish-npm:
+    name: Publish package
+    needs:
+      - prepare
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Setup node & registry url for npm package registry
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install package dependencies
+        if: steps.cache-theme-modules.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: Build package
+        run: yarn build
+
+      - name: Publish to NPM Registry
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-github:
     name: Publish package
     needs:
       - prepare
@@ -43,6 +76,9 @@ jobs:
           node-version: 'latest'
           registry-url: 'https://npm.pkg.github.com'
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install package dependencies
         if: steps.cache-theme-modules.outputs.cache-hit != 'true'
         run: yarn install
@@ -58,7 +94,7 @@ jobs:
   release:
     name: Create release
     needs:
-      - publish
+      - publish-github
     runs-on: ubuntu-latest
 
     steps:
