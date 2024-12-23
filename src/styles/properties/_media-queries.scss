@@ -19,12 +19,15 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-$spacer: 8 !default;
-$font-size: 16 !default;
+@custom-media --xs (min-width: 360px);
+@custom-media --sm (min-width: 640px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 1024px);
+@custom-media --xl (min-width: 1280px);
+@custom-media --hi (min-width: 1440px);
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-regular: 500;
-$font-weight-medium: 600;
-$font-weight-semi-bold: 700;
-$font-weight-bold: 800;
+@custom-media --landscape (orientation: landscape);
+@custom-media --portrait (orientation: portrait);
+
+@custom-media --scheme-dark (prefers-color-scheme: dark);
+@custom-media --scheme-light (prefers-color-scheme: light);

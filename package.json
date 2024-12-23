@@ -20,6 +20,7 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "packageManager": "yarn@4.5.3",
   "dependencies": {
     "yargs": "^17.7.2"
   },
@@ -28,5 +29,13 @@
     "@types/yargs": "^17.0.32",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "autoprefixer": "*",
+    "postcss-custom-media": "*",
+    "postcss-inline-svg": "*",
+    "postcss-scss": "*",
+    "postscss": "*",
+    "sass": "*"
   }
 }

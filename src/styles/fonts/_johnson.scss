@@ -19,12 +19,13 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-$spacer: 8 !default;
-$font-size: 16 !default;
+@use "@styles/mixins";
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-regular: 500;
-$font-weight-medium: 600;
-$font-weight-semi-bold: 700;
-$font-weight-bold: 800;
+@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Light', woff2 woff, 'swap', 300);
+@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Regular', woff2 woff, 'swap', 500);
+@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Medium', woff2 woff, 'swap', 600);
+@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Bold', woff2 woff, 'swap', 800);
+@include mixins.font-face('JohnsonText', '/JohnsonText-Light', woff2 woff, 'swap', 300);
+@include mixins.font-face('JohnsonText', '/JohnsonText-Regular', woff2 woff, 'swap', 500);
+@include mixins.font-face('JohnsonText', '/JohnsonText-Medium', woff2 woff, 'swap', 600);
+@include mixins.font-face('JohnsonText', '/JohnsonText-Bold', woff2 woff, 'swap', 800);
