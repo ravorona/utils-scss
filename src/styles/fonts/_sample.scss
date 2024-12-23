@@ -20,12 +20,11 @@
  */
 
 @use "@styles/mixins";
+@use "@styles/variables";
 
-@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Light', woff2 woff, 'swap', 300);
-@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Regular', woff2 woff, 'swap', 500);
-@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Medium', woff2 woff, 'swap', 600);
-@include mixins.font-face('JohnsonDisplay', '/JohnsonDisplay-Bold', woff2 woff, 'swap', 800);
-@include mixins.font-face('JohnsonText', '/JohnsonText-Light', woff2 woff, 'swap', 300);
-@include mixins.font-face('JohnsonText', '/JohnsonText-Regular', woff2 woff, 'swap', 500);
-@include mixins.font-face('JohnsonText', '/JohnsonText-Medium', woff2 woff, 'swap', 600);
-@include mixins.font-face('JohnsonText', '/JohnsonText-Bold', woff2 woff, 'swap', 800);
+@include mixins.font-face('sample', '/sample-light', woff2 woff, 'swap', 300);
+@include mixins.font-face('sample', '/sample-normal', woff2 woff, 'swap', 400);
+@include mixins.font-face('sample', '/sample-regular', woff2 woff, 'swap', 500);
+@include mixins.font-face('sample', '/sample-medium', woff2 woff, 'swap', 600);
+@include mixins.font-face('sample', '/sample-semi-bold', woff2 woff, 'swap', 700);
+@include mixins.font-face('sample', '/sample-bold', woff2 woff, 'swap', 800);
