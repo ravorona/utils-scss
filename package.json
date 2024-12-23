@@ -8,7 +8,7 @@
   "bin": "./dist/index.js",
   "scripts": {
     "lint": "tsc --noEmit",
-    "copy": "cp -r ./src/styles ./dist/styles",
+    "copy": "cp -r ./src/styles ./dist/styles && cp ./postcss.config.js ./dist/postcss.config.js",
     "compile": "tsc",
     "build": "yarn compile && yarn copy"
   },
