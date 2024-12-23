@@ -1,6 +1,16 @@
 # Changelog
 
+## [2.0.1](https://github.com/ravorona/eslint-config/compare/2.0.0...2.0.1) - 2024-12-23
+
+### Bug Fixes
+
+- Copy postcss.config.js into dist - ([72048bf](https://github.com/ravorona/eslint-config/commit/72048bf33adfa1edef8dab8fafbca901570e8650)) - яαvoroηα
+
 ## [2.0.0](https://github.com/ravorona/eslint-config/compare/1.0.6...2.0.0) - 2024-12-23
+
+### CI/CD
+
+- Workflow improvements - ([695a866](https://github.com/ravorona/eslint-config/commit/695a86669f3e3649280c30ceb34af9a12603bfeb)) - яαvoroηα
 
 ### Features
 
@@ -45,7 +55,7 @@
 - Update package description - ([18333b7](https://github.com/ravorona/eslint-config/commit/18333b7dcc51a8a7950923fd3849a848b79b6a16)) - яαvoroηα
 - Add readme - ([a8986ca](https://github.com/ravorona/eslint-config/commit/a8986caf6d81b8c44677b99f98056ff7758ba0dc)) - яαvoroηα
 
-## [1.0.0](https://github.com/ravorona/eslint-config/compare/2.0.0...1.0.0) - 2024-07-28
+## [1.0.0](https://github.com/ravorona/eslint-config/compare/2.0.1...1.0.0) - 2024-07-28
 
 ### Features
 
